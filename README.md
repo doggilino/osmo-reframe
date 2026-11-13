@@ -1,6 +1,6 @@
 # OsmoReframe for Final Cut Pro
 
-An experimental Final Cut Pro effect for reframing stitched DJI Osmo 360 footage.
+**Experimental alpha / research prototype.** This Final Cut Pro effect explores reframing DJI Osmo 360 footage. The Motion effect template needed for installation is missing from this snapshot, so the repository is not a complete installable release.
 
 > **Product decision:** a production reframe plugin is not necessary for the current workflow.
 > DJI Panorama Exporter removes the one-file-at-a-time Studio export step, and Final Cut already
