@@ -1,0 +1,103 @@
+name: OsmoReframe
+options:
+  bundleIdPrefix: com.gastongordon.osmoreframe
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+settings:
+  base:
+    SDKROOT: macosx
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    ARCHS: arm64
+    CLANG_ENABLE_MODULES: YES
+    CLANG_ENABLE_OBJC_ARC: YES
+    ADDITIONAL_SDKS: /Library/Developer/SDKs/FxPlug.sdk
+    FRAMEWORK_SEARCH_PATHS:
+      - $(inherited)
+      - /Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks
+    HEADER_SEARCH_PATHS:
+      - $(inherited)
+      - /Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks/FxPlug.framework/Versions/A/Headers
+      - /Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks/PluginManager.framework/Versions/B/Headers
+    # Ad-hoc signing keeps local development builds reproducible on machines
+    # without a Developer certificate. Distribution will use a real identity.
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "-"
+configs:
+  Debug: debug
+  Release: release
+targets:
+  OsmoReframeFxPlug:
+    type: xpc-service
+    platform: macOS
+    productName: OsmoReframeFxPlug
+    sources:
+      - path: FxPlug
+        excludes:
+          - Info.plist
+          - Entitlements.entitlements
+          - OsmoReframeShaders.metal
+      - path: Modules
+        buildPhase: none
+      - path: build/shaders/OsmoReframe.metallib
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gastongordon.osmoreframe.fxplug
+        PRODUCT_NAME: OsmoReframeFxPlug
+        INFOPLIST_FILE: FxPlug/Info.plist
+        CODE_SIGN_ENTITLEMENTS: FxPlug/Entitlements.entitlements
+        WRAPPER_EXTENSION: pluginkit
+        APPLICATION_EXTENSION_API_ONLY: YES
+        CLANG_CXX_LANGUAGE_STANDARD: c++17
+        SWIFT_INCLUDE_PATHS:
+          - $(SRCROOT)/Modules/FxPlug
+          - $(SRCROOT)/Modules/PluginManager
+        LD_RUNPATH_SEARCH_PATHS:
+          - $(inherited)
+          - "@executable_path/../Frameworks"
+    dependencies:
+      - sdk: Foundation.framework
+      - sdk: IOSurface.framework
+      - sdk: Metal.framework
+      - sdk: QuartzCore.framework
+      - framework: /Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks/FxPlug.framework
+      - framework: /Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks/PluginManager.framework
+    postBuildScripts:
+      - name: Embed FxPlug runtime frameworks
+        script: scripts/embed-fxplug-frameworks.sh
+        basedOnDependencyAnalysis: false
+
+  OsmoReframe:
+    type: application
+    platform: macOS
+    productName: OsmoReframe
+    sources:
+      - path: App
+        excludes:
+          - Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gastongordon.osmoreframe.host
+        PRODUCT_NAME: OsmoReframe
+        INFOPLIST_FILE: App/Info.plist
+        LD_RUNPATH_SEARCH_PATHS:
+          - $(inherited)
+          - "@executable_path/../Frameworks"
+    dependencies:
+      - target: OsmoReframeFxPlug
+      - sdk: AppKit.framework
+    postBuildScripts:
+      - name: Embed FxPlug service
+        script: scripts/embed-plugin-service.sh
+        basedOnDependencyAnalysis: false
+schemes:
+  OsmoReframe:
+    build:
+      targets:
+        OsmoReframe: all
+    run:
+      config: Debug
+    archive:
+      config: Release

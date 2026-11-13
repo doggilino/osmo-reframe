@@ -1,0 +1,22 @@
+.DS_Store
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+
+# Camera originals are local test fixtures, not source code.
+Sample Footage Osmo 360/
+
+
+# Local dependencies, credentials, generated files and caches
+node_modules/
+dist/
+build/
+.DS_Store
+.env
+.env.*
+!.env.example
+.wrangler/
+.playwright*/
+__pycache__/
+*.pyc

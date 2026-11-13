@@ -1,0 +1,6 @@
+framework module PluginManager {
+  umbrella header "PluginManager.h"
+  export *
+  module * { export * }
+}
+

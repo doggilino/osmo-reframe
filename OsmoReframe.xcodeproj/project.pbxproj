@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A18D021E2DB8C9844029042 /* PluginManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22D4B8A415E88EE50892211 /* PluginManager.framework */; };
+		16BC1FFFD54DD6C3BF2FDCD8 /* OsmoReframe.metallib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A5EF23EB2CFBD0A37978B /* OsmoReframe.metallib */; };
+		43247C457A7F000AC215E64A /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD4B55E2FA21806432ECC94 /* Metal.framework */; };
+		6791EEE115207176F25F6300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875D49DCF26FA8D6904B8A45 /* AppDelegate.swift */; };
+		7844714DCA933F87E952C9EC /* OsmoReframeFxPlug.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B5210F25536D9DA90717C4B /* OsmoReframeFxPlug.xpc */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFAB33475BBF3FD6BB38A4A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F31061C4936D74BA661E753 /* main.m */; };
+		B0987195E72D88ADD9629293 /* FxPlug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48C6D9E05414FC0525CEDB1 /* FxPlug.framework */; };
+		B752B29849F870DF0984F86D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C07A3BFD7F8721E3CF8AD8 /* AppKit.framework */; };
+		BCEFDB7A816DD92CBE6C5C64 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07612E2CAD1BDFDFD11F5A9C /* IOSurface.framework */; };
+		D9C0E1D7B752363C2178AA65 /* OsmoReframePlugIn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F92151027DC93E20DFB5D /* OsmoReframePlugIn.mm */; };
+		DB00764DC31E2A297B8116BD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B1CED37ACD2A947D65E6B6 /* QuartzCore.framework */; };
+		E170139E2F7BEAF75068ECFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CF45CD404C3853EAFF63BC /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D93D5DEC45A4265A9F98A27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54D1D3A0352A2EFB158DA145 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15A0BA39E42BCC58C1047642;
+			remoteInfo = OsmoReframeFxPlug;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B3CE516FB458A1B12E77257 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				7844714DCA933F87E952C9EC /* OsmoReframeFxPlug.xpc in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07612E2CAD1BDFDFD11F5A9C /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		15A05FB5A354CB3243A7BF2E /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		1A2F92151027DC93E20DFB5D /* OsmoReframePlugIn.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OsmoReframePlugIn.mm; sourceTree = "<group>"; };
+		1F31061C4936D74BA661E753 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B3A5EF23EB2CFBD0A37978B /* OsmoReframe.metallib */ = {isa = PBXFileReference; lastKnownFileType = "archive.metal-library"; path = OsmoReframe.metallib; sourceTree = "<group>"; };
+		3FD4B55E2FA21806432ECC94 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		6B5210F25536D9DA90717C4B /* OsmoReframeFxPlug.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = OsmoReframeFxPlug.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F5A3AFFA57A6FA37D43C03 /* OsmoReframePlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OsmoReframePlugIn.h; sourceTree = "<group>"; };
+		850695E8C02766283A24A027 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		875D49DCF26FA8D6904B8A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A8CF45CD404C3853EAFF63BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B22D4B8A415E88EE50892211 /* PluginManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PluginManager.framework; path = ../../../../../Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks/PluginManager.framework; sourceTree = "<group>"; };
+		C3C07A3BFD7F8721E3CF8AD8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D0B1CED37ACD2A947D65E6B6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F48C6D9E05414FC0525CEDB1 /* FxPlug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FxPlug.framework; path = ../../../../../Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks/FxPlug.framework; sourceTree = "<group>"; };
+		FC1CA758F9F54C5D3AE596AF /* OsmoReframe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OsmoReframe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13B37975DC86745FFFE4A258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B752B29849F870DF0984F86D /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		878EEF680FF49F3CDA7156EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E170139E2F7BEAF75068ECFD /* Foundation.framework in Frameworks */,
+				BCEFDB7A816DD92CBE6C5C64 /* IOSurface.framework in Frameworks */,
+				43247C457A7F000AC215E64A /* Metal.framework in Frameworks */,
+				DB00764DC31E2A297B8116BD /* QuartzCore.framework in Frameworks */,
+				B0987195E72D88ADD9629293 /* FxPlug.framework in Frameworks */,
+				0A18D021E2DB8C9844029042 /* PluginManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06AE36B0079E1D47231504AC = {
+			isa = PBXGroup;
+			children = (
+				5A10BD2943D058C9EBF6D920 /* App */,
+				B278D17154710A54C9A55A86 /* build */,
+				A49159AB5C4151D28F681DF2 /* FxPlug */,
+				4AA944C2CC8DF918E1017CD6 /* Modules */,
+				821A6B50D9CC8F44FBA533DB /* Frameworks */,
+				684CDE5C96004E612A44AA3A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4AA944C2CC8DF918E1017CD6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E25A6DC44C08805C3DF89A93 /* FxPlug */,
+				CDF953463B41B0A4594D6556 /* PluginManager */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		541562BF558858E6AF8C0746 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				2B3A5EF23EB2CFBD0A37978B /* OsmoReframe.metallib */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		5A10BD2943D058C9EBF6D920 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				875D49DCF26FA8D6904B8A45 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		684CDE5C96004E612A44AA3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC1CA758F9F54C5D3AE596AF /* OsmoReframe.app */,
+				6B5210F25536D9DA90717C4B /* OsmoReframeFxPlug.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		821A6B50D9CC8F44FBA533DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3C07A3BFD7F8721E3CF8AD8 /* AppKit.framework */,
+				A8CF45CD404C3853EAFF63BC /* Foundation.framework */,
+				F48C6D9E05414FC0525CEDB1 /* FxPlug.framework */,
+				07612E2CAD1BDFDFD11F5A9C /* IOSurface.framework */,
+				3FD4B55E2FA21806432ECC94 /* Metal.framework */,
+				B22D4B8A415E88EE50892211 /* PluginManager.framework */,
+				D0B1CED37ACD2A947D65E6B6 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A49159AB5C4151D28F681DF2 /* FxPlug */ = {
+			isa = PBXGroup;
+			children = (
+				1F31061C4936D74BA661E753 /* main.m */,
+				79F5A3AFFA57A6FA37D43C03 /* OsmoReframePlugIn.h */,
+				1A2F92151027DC93E20DFB5D /* OsmoReframePlugIn.mm */,
+			);
+			path = FxPlug;
+			sourceTree = "<group>";
+		};
+		B278D17154710A54C9A55A86 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				541562BF558858E6AF8C0746 /* shaders */,
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		CDF953463B41B0A4594D6556 /* PluginManager */ = {
+			isa = PBXGroup;
+			children = (
+				850695E8C02766283A24A027 /* module.modulemap */,
+			);
+			path = PluginManager;
+			sourceTree = "<group>";
+		};
+		E25A6DC44C08805C3DF89A93 /* FxPlug */ = {
+			isa = PBXGroup;
+			children = (
+				15A05FB5A354CB3243A7BF2E /* module.modulemap */,
+			);
+			path = FxPlug;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15A0BA39E42BCC58C1047642 /* OsmoReframeFxPlug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04386D709C4EDD07AD1DC8A1 /* Build configuration list for PBXNativeTarget "OsmoReframeFxPlug" */;
+			buildPhases = (
+				1C92A96BACB7CFB659F7C9B4 /* Sources */,
+				87027AC676B817F9BE9F2981 /* Resources */,
+				878EEF680FF49F3CDA7156EF /* Frameworks */,
+				B9591BFE49D3A2EE01DEA508 /* Embed FxPlug runtime frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OsmoReframeFxPlug;
+			packageProductDependencies = (
+			);
+			productName = OsmoReframeFxPlug;
+			productReference = 6B5210F25536D9DA90717C4B /* OsmoReframeFxPlug.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+		D15AE85B3EC7E96FF95C5277 /* OsmoReframe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D2332E4970DAA1CA7C7982C /* Build configuration list for PBXNativeTarget "OsmoReframe" */;
+			buildPhases = (
+				551136AD6F6E1040A0507458 /* Sources */,
+				2B3CE516FB458A1B12E77257 /* CopyFiles */,
+				13B37975DC86745FFFE4A258 /* Frameworks */,
+				28508B973A9C9CDA1958AE4B /* Embed FxPlug service */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FAB2AD8706EF3180EF60031 /* PBXTargetDependency */,
+			);
+			name = OsmoReframe;
+			packageProductDependencies = (
+			);
+			productName = OsmoReframe;
+			productReference = FC1CA758F9F54C5D3AE596AF /* OsmoReframe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54D1D3A0352A2EFB158DA145 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					15A0BA39E42BCC58C1047642 = {
+						ProvisioningStyle = Manual;
+					};
+					D15AE85B3EC7E96FF95C5277 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = B1DA1DC515A047DA514B3E8F /* Build configuration list for PBXProject "OsmoReframe" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 06AE36B0079E1D47231504AC;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 684CDE5C96004E612A44AA3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D15AE85B3EC7E96FF95C5277 /* OsmoReframe */,
+				15A0BA39E42BCC58C1047642 /* OsmoReframeFxPlug */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87027AC676B817F9BE9F2981 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16BC1FFFD54DD6C3BF2FDCD8 /* OsmoReframe.metallib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28508B973A9C9CDA1958AE4B /* Embed FxPlug service */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Embed FxPlug service";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "scripts/embed-plugin-service.sh";
+		};
+		B9591BFE49D3A2EE01DEA508 /* Embed FxPlug runtime frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Embed FxPlug runtime frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "scripts/embed-fxplug-frameworks.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C92A96BACB7CFB659F7C9B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C0E1D7B752363C2178AA65 /* OsmoReframePlugIn.mm in Sources */,
+				AFAB33475BBF3FD6BB38A4A1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		551136AD6F6E1040A0507458 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6791EEE115207176F25F6300 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FAB2AD8706EF3180EF60031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15A0BA39E42BCC58C1047642 /* OsmoReframeFxPlug */;
+			targetProxy = 6D93D5DEC45A4265A9F98A27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0EF884F17AFB2A41FDBE19B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = /Library/Developer/SDKs/FxPlug.sdk;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks/FxPlug.framework/Versions/A/Headers,
+					/Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks/PluginManager.framework/Versions/B/Headers,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2A3BD10544CACDC3AE835EA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = /Library/Developer/SDKs/FxPlug.sdk;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks/FxPlug.framework/Versions/A/Headers,
+					/Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks/PluginManager.framework/Versions/B/Headers,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		33065AF847008412F6F72794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CODE_SIGN_ENTITLEMENTS = FxPlug/Entitlements.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks\"",
+				);
+				INFOPLIST_FILE = FxPlug/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gastongordon.osmoreframe.fxplug;
+				PRODUCT_NAME = OsmoReframeFxPlug;
+				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = (
+					"$(SRCROOT)/Modules/FxPlug",
+					"$(SRCROOT)/Modules/PluginManager",
+				);
+				WRAPPER_EXTENSION = pluginkit;
+			};
+			name = Debug;
+		};
+		51B525B0B8D304925C788F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CODE_SIGN_ENTITLEMENTS = FxPlug/Entitlements.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks\"",
+				);
+				INFOPLIST_FILE = FxPlug/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gastongordon.osmoreframe.fxplug;
+				PRODUCT_NAME = OsmoReframeFxPlug;
+				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = (
+					"$(SRCROOT)/Modules/FxPlug",
+					"$(SRCROOT)/Modules/PluginManager",
+				);
+				WRAPPER_EXTENSION = pluginkit;
+			};
+			name = Release;
+		};
+		5437AAE7E2813B3EEC9270D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gastongordon.osmoreframe.host;
+				PRODUCT_NAME = OsmoReframe;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		65932A7DC5246D31F6F8216B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gastongordon.osmoreframe.host;
+				PRODUCT_NAME = OsmoReframe;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04386D709C4EDD07AD1DC8A1 /* Build configuration list for PBXNativeTarget "OsmoReframeFxPlug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33065AF847008412F6F72794 /* Debug */,
+				51B525B0B8D304925C788F4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2D2332E4970DAA1CA7C7982C /* Build configuration list for PBXNativeTarget "OsmoReframe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5437AAE7E2813B3EEC9270D8 /* Debug */,
+				65932A7DC5246D31F6F8216B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B1DA1DC515A047DA514B3E8F /* Build configuration list for PBXProject "OsmoReframe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A3BD10544CACDC3AE835EA9 /* Debug */,
+				0EF884F17AFB2A41FDBE19B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54D1D3A0352A2EFB158DA145 /* Project object */;
+}
