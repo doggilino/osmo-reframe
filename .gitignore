@@ -20,3 +20,6 @@ build/
 .playwright*/
 __pycache__/
 *.pyc
+
+# Generated exports and local test data
+exports/

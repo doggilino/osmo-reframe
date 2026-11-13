@@ -31,6 +31,10 @@ stitching and stabilization implementation.
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and
 [docs/SAMPLE_ANALYSIS.md](docs/SAMPLE_ANALYSIS.md).
 
+## Repository completeness
+
+The Motion effect template expected by `scripts/install-motion-template.sh` was not present in the local project snapshot. Installation of that template cannot be reproduced from this repository until it is restored or recreated. The source is an experimental, paused prototype.
+
 ## Requirements
 
 - macOS 13 or newer
