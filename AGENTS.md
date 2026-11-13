@@ -1,0 +1,10 @@
+# Project agent instructions
+
+## GitHub and collaboration
+
+- Canonical repository: https://github.com/doggilino/osmo-reframe (public); remote: `origin`; default working branch: `main`. Verify `git remote -v`, `git status --short --branch`, and the active branch at the start; do not assume the checkout is up to date. Fetch when network access is available and compare against the appropriate upstream before editing or pushing.
+- Preserve other people’s and other agents’ uncommitted work. For concurrent work use a separate branch/worktree or coordinate; never reset, overwrite, clean, force-push, or resolve conflicts by discarding work without explicit permission. If histories diverge, inspect and reconcile safely; ask if ownership or intent is unclear.
+- At the end of authorized changes, run appropriate checks, review exactly what will be committed (including ignored files and secret exposure), commit only the changes belonging to the task, and push the intended branch to the canonical remote when authorized and safe. Do not stage unrelated changes. If a push is blocked, report the precise state and next step; never claim synchronization until the remote commit has been verified.
+- Record the branch, commit, test results, unresolved changes, and any incomplete sync in the handoff. A Git push is not an automatic ongoing sync: future edits require another commit and push. A repository is not a complete backup of ignored files, secrets, external data or live databases.
+- A Git push is not permission to deploy, send messages, publish a site, change visibility, or perform another external action. Respect the user’s current instructions, project privacy and approval requirements.
+- Project-specific notes: PUBLIC: every pushed commit is visible to everyone. The project is an experimental alpha and the Motion template is missing; do not claim a complete installable release. Obtain specific user authorization before publishing new content, secrets, media or personal data. Keep camera originals, exports and generated builds out of Git.
